@@ -2,7 +2,7 @@
 APP_PORT=${PORT:-8080}
 
 echo "================================================"
-echo " DijaPortfolio — Starting on port $APP_PORT"
+echo " JoePortfolio — Starting on port $APP_PORT"
 echo " DB Host     : ${MYSQL_HOST:-localhost}"
 echo " DB Name     : ${MYSQL_DATABASE:-joe_portfolio}"
 echo "================================================"

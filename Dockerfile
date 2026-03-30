@@ -3,7 +3,7 @@ FROM eclipse-temurin:17-jdk-jammy AS builder
 WORKDIR /build
 
 COPY src/       ./src/
-COPY WebContent/ ./WebContent/
+COPY webapp/ ./WebContent/
 
 RUN mkdir -p ./WebContent/WEB-INF/classes
 

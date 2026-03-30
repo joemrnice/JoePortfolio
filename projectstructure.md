@@ -16,7 +16,7 @@ JoePortfolio/
 │                   │   └── ContactServlet.java
 │                   └── util/
 │                       └── DBConnection.java
-├── WebContent/
+├── webapp/
 │   ├── WEB-INF/
 │   │   ├── web.xml
 │   │   └── lib/
