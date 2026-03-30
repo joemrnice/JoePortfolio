@@ -1,6 +1,6 @@
 # JoePortfolio
 
-<video src="assets/joes.webm" width="600" controls></video>
+<video src="https://github.com/joemrnice/JoePortfolio/blob/main/assets/joes.webm" width="600" controls></video>
 
 A professional, responsive personal portfolio website for a male
 web developer named Joe — built with pure J2EE (Servlets + JSP + JDBC).
