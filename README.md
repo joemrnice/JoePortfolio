@@ -1,5 +1,7 @@
 # JoePortfolio
 
+<video src="joes.webm" width="600" controls></video>
+
 A professional, responsive personal portfolio website for a male
 web developer named Joe — built with pure J2EE (Servlets + JSP + JDBC).
 
