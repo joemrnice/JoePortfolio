@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!--
+        Direct JDBC — no JNDI required.
+        DB credentials configured in DBConnection.java.
+        This file can be extended with JNDI Resource if needed.
+    -->
+    <Resource name="jdbc/joeportfolio"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="10000"
+              username="root"
+              password=""
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/joe_portfolio?useSSL=false&amp;serverTimezone=UTC"/>
+</Context>
