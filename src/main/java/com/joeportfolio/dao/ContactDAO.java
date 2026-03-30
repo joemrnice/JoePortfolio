@@ -1,7 +1,7 @@
 package com.joeportfolio.dao;
 
 import com.joeportfolio.model.Contact;
-import com.joeportfolio.util.TestDBConnection;
+import com.joeportfolio.util.EXDBConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
