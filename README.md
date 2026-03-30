@@ -1,6 +1,6 @@
 # JoePortfolio
 
-<video src="assets/joes.mp4" width="600" controls></video>
+![Project Portfolio](https://youtu.be/NGOh3XKJO_c)
 
 A professional, responsive personal portfolio website for a male
 web developer named Joe — built with pure J2EE (Servlets + JSP + JDBC).
