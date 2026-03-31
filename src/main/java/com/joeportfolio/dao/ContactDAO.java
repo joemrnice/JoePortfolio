@@ -55,7 +55,7 @@ public class ContactDAO {
         PreparedStatement pstmt = null;
 
         try {
-            conn  = TestDBConnection.getConnection();
+            conn  = EXDBConnection.getConnection();
             pstmt = conn.prepareStatement(SQL_INSERT);
 
             // Bind parameters — matches (?, ?, ?, ?, ?) in SQL_INSERT
@@ -98,7 +98,7 @@ public class ContactDAO {
         List<Contact> contacts = new ArrayList<>();
 
         try {
-            conn  = TestDBConnection.getConnection();
+            conn  = EXDBConnection.getConnection();
             pstmt = conn.prepareStatement(SQL_FIND_ALL);
             rs    = pstmt.executeQuery();
 
@@ -131,7 +131,7 @@ public class ContactDAO {
         ResultSet rs           = null;
 
         try {
-            conn  = TestDBConnection.getConnection();
+            conn  = EXDBConnection.getConnection();
             pstmt = conn.prepareStatement(SQL_FIND_BY_ID);
             pstmt.setInt(1, id);
             rs = pstmt.executeQuery();
@@ -164,7 +164,7 @@ public class ContactDAO {
         ResultSet rs           = null;
 
         try {
-            conn  = TestDBConnection.getConnection();
+            conn  = EXDBConnection.getConnection();
             pstmt = conn.prepareStatement(SQL_COUNT_UNREAD);
             rs    = pstmt.executeQuery();
 
