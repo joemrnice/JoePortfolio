@@ -11,8 +11,7 @@ sed -i \
   "s/port=\"8080\"/port=\"${APP_PORT}\"/" \
   /usr/local/tomcat/conf/server.xml
 
-sed -i \
-  '/<Connector protocol="AJP/,/<\/Connector>/d' \
+sed -i '/<Connector protocol="AJP/,/<\/Connector>/d' \
   /usr/local/tomcat/conf/server.xml
 
 echo "✔ Tomcat configured for port $APP_PORT"
