@@ -2,8 +2,8 @@ FROM eclipse-temurin:21-jdk-jammy AS build
 
 WORKDIR /build
 
-COPY src/       ./src/
-COPY WebContent/ ./WebContent/
+COPY src/main/java/ ./src/
+COPY src/main/webapp/ ./WebContent/
 
 RUN mkdir -p ./WebContent/WEB-INF/classes
 
