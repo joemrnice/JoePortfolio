@@ -1,18 +1,19 @@
-FROM tomcat:10.1-jdk21-temurin-jammy AS tomcat
 FROM eclipse-temurin:21-jdk-jammy AS build
 
 WORKDIR /build
 
 COPY src/main/java/ ./src/
 COPY src/main/webapp/ ./WebContent/
-COPY --from=tomcat /usr/local/tomcat/lib/servlet-api.jar ./servlet-api.jar
+
+RUN wget -q -O javax.servlet-api.jar \
+    "https://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar"
 
 RUN mkdir -p ./WebContent/WEB-INF/classes
 
 RUN find src -name "*.java" > sources.txt \
     && javac \
        -encoding UTF-8 \
-       -cp "WebContent/WEB-INF/lib/*:servlet-api.jar" \
+       -cp "WebContent/WEB-INF/lib/*:javax.servlet-api.jar" \
        -d WebContent/WEB-INF/classes \
        @sources.txt \
     && echo "✔ Compilation successful"
