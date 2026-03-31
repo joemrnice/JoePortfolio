@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk-jammy AS builder
+FROM eclipse-temurin:21-jdk-jammy AS build
 
 WORKDIR /build
 
@@ -21,7 +21,7 @@ RUN cd WebContent \
     && echo "✔ WAR created"
 
 
-FROM tomcat:9.0-jdk17-temurin-jammy
+FROM tomcat:10.1-jdk21-temurin-jammy
 
 LABEL maintainer="Code Zerra"
 LABEL description="JoePortfolio — J2EE Portfolio App"
@@ -37,3 +37,20 @@ RUN chmod +x /startup.sh
 EXPOSE 8080
 
 CMD ["/startup.sh"]
+
+# Stage 1: Build the WAR file
+# WORKDIR /app
+#COPY . .
+# Replace with ./gradlew build if using Gradle
+#RUN mvn clean package -DskipTests
+
+# Stage 2: Run with Tomcat
+
+# Remove default webapps
+#RUN rm -rf /usr/local/tomcat/webapps/*
+# Copy war file from build stage to tomcat deployment directory
+#COPY --from=build /app/target/*.war /usr/local/tomcat/webapps/ROOT.war
+
+#EXPOSE 8080
+#CMD ["catalina.sh", "run"]
+
