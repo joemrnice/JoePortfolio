@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description"
           content="Joe – Passionate Web Developer crafting beautiful digital experiences."/>
+    <link rel="icon" href="<%= request.getContextPath() %>/images/joe.jpg" type="image/x-icon">
     <title>Joe | Web Developer Portfolio</title>
 
     <!-- Google Fonts -->
