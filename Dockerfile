@@ -28,7 +28,7 @@ LABEL description="JoePortfolio — J2EE Portfolio App"
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY --from=builder /build/ROOT.war \
+COPY --from=build /build/ROOT.war \
      /usr/local/tomcat/webapps/ROOT.war
 
 COPY startup.sh /startup.sh
