@@ -3,15 +3,15 @@ FROM eclipse-temurin:17-jdk-jammy AS builder
 WORKDIR /build
 
 COPY src/       ./src/
-COPY webapp/ ./webapp/
+COPY WebContent/ ./WebContent/
 
-RUN mkdir -p ./webapp/WEB-INF/classes
+RUN mkdir -p ./WebContent/WEB-INF/classes
 
 RUN find src -name "*.java" > sources.txt \
     && javac \
        -encoding UTF-8 \
-       -cp "webapp/WEB-INF/lib/*" \
-       -d webapp/WEB-INF/classes \
+       -cp "WebContent/WEB-INF/lib/*" \
+       -d WebContent/WEB-INF/classes \
        @sources.txt \
     && echo "✔ Compilation successful"
 
