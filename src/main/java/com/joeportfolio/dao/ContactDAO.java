@@ -233,6 +233,6 @@ public class ContactDAO {
             }
         }
         // Finally the Connection — returns it to pool / closes it
-        TestDBConnection.closeConnection(conn);
+        EXDBConnection.closeConnection(conn);
     }
 }
